@@ -27,7 +27,7 @@
         "php": "^7.4 || ^8.0"
     },
     "require-dev": {
-        "codeception/codeception": "^5.0",
+        "codeception/codeception": "*",
         "phpunit/phpunit": "*",
         "codeception/module-phpbrowser": "*",
         "codeception/module-asserts": "*"
