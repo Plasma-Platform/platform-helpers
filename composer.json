@@ -1,0 +1,44 @@
+{
+    "name": "plasma-platform/platform-helpers",
+    "description": "Clients for working with api microservices.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "codeception",
+        "tests"
+    ],
+    "authors": [
+        {
+            "name": "Dima Novoseltsev",
+            "email": "dima.novoseltsev1@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "plasmaPlatform\\helpers\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "plasmaPlatform\\helpers\\tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^7.4 || ^8.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "^5.0",
+        "phpunit/phpunit": "*",
+        "codeception/module-phpbrowser": "*",
+        "codeception/module-asserts": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "scripts": {
+        "test": "php vendor/bin/codecept run $* -d --coverage --coverage-html"
+    }
+}
