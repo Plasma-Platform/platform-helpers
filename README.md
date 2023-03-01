@@ -13,10 +13,4 @@ This project requires PHP 7.4 or higher.  To install it via [Composer] simply ru
 $ composer require plasma-platform/platform-helpers
 ```
 
-## Testing
-
-``` bash
-$ composer test
-```
-
 [Composer]: https://getcomposer.org/
