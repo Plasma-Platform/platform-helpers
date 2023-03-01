@@ -29,7 +29,6 @@
     "require-dev": {
         "codeception/codeception": "*",
         "phpunit/phpunit": "*",
-        "codeception/module-phpbrowser": "*",
         "codeception/module-asserts": "*"
     },
     "repositories": [
