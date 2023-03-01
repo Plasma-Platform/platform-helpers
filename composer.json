@@ -23,8 +23,7 @@
     },
     "require-dev": {
         "codeception/codeception": "*",
-        "phpunit/phpunit": "*",
-        "codeception/module-asserts": "*"
+        "phpunit/phpunit": "*"
     },
     "repositories": [
         {
