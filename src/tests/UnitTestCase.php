@@ -5,6 +5,7 @@ namespace plasmaPlatform\helpers\tests;
 
 use Closure;
 use Codeception\PHPUnit\TestCase;
+use InvalidArgumentException;
 use PHPUnit\Framework\MockObject\Rule\InvocationOrder;
 use ReflectionClass;
 use ReflectionException;
@@ -59,5 +60,17 @@ class UnitTestCase extends TestCase
         $method->setAccessible(true);
 
         return $method->invokeArgs($object, $parameters);
+    }
+
+    protected function getObjectForTrait(string $traitName): object
+    {
+        if (!trait_exists($traitName)) {
+            throw new InvalidArgumentException("Trait '$traitName' does not exist.");
+        }
+
+        $className = 'TempClassForTrait_' . uniqid();
+        eval("class $className { use $traitName; }");
+
+        return new $className();
     }
 }
