@@ -4,9 +4,8 @@ Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) princi
 
 ## [1.1.0] - 2025-02-26
 ### Added
-- add `getObjectForTrait`
+- limited phpunit version to 12
 
 ## [1.0.0] - 2023-03-01
 ### Added
 - add base class for unit tests codeception
-
