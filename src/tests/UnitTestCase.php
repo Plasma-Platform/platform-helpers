@@ -62,8 +62,23 @@ class UnitTestCase extends TestCase
         return $method->invokeArgs($object, $parameters);
     }
 
-    protected function getObjectForTrait(string $traitName): object
-    {
+    /**
+     * @param string $traitName
+     * @param array $arguments
+     * @param string $traitClassName
+     * @param bool $callOriginalConstructor
+     * @param bool $callOriginalClone
+     * @param bool $callAutoload
+     * @return mixed
+     */
+    protected function getObjectForTrait(
+        string $traitName,
+        array $arguments = [],
+        string $traitClassName = '',
+        bool $callOriginalConstructor = true,
+        bool $callOriginalClone = true,
+        bool $callAutoload = true
+    ): object {
         if (!trait_exists($traitName)) {
             throw new InvalidArgumentException("Trait '$traitName' does not exist.");
         }
